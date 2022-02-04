@@ -11,8 +11,8 @@ let handler = async(m, { conn }) => {
 Silahkan klik pada "List Harga" untuk melihat list.
 
 Pembayaran:
-Pulsa (ISAT): 085730903853 (+5.000)
-Gopay: 085730903853
+Pulsa (ISAT): 085867185837 (+5.000)
+Gopay: 085867185837
 `.trim()
     const button = {
         buttonText: 'List Harga',
