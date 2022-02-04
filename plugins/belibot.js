@@ -7,7 +7,7 @@ let handler = async (m, { conn }) => {
 ╠➥ *Permanen* : *Rp 40000*
 ╠➥ *Owner* :   *Rp 30000*/bln
 ╠➥ *Nomer Gopay & pulsa* : 
-║    085730903853
+║    085867185837
 ╠═〘 PEMBAYARAN 〙 ═
 ╠➥ Dana Dan Pulsa
 ║
@@ -16,7 +16,7 @@ let handler = async (m, { conn }) => {
 ║
 ╠═ ©2021 Rpg wabot-aq
 ╠═ Scrip original by Nurutomo
-╠═〘 AlyaaXzy 〙 ═`.trim(), watermark, 'Dana', '#viadana', 'Pulsa', '#viapulsa', m)
+╠═〘 FuadBot 〙 ═`.trim(), watermark, 'Dana', '#viadana', 'Pulsa', '#viapulsa', m)
 }
 
 handler.command = /^sewabot$/i
