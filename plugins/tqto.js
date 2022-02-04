@@ -4,6 +4,7 @@ BIG THANKS TO
 
 •Allah swt
 •My ortu
+•FuadOFC
 •Nurutomo
 •Adiwajshing
 •Ariffb
@@ -13,7 +14,7 @@ BIG THANKS TO
 •Rteam1
 •Beniismael
 •Raditya 
-•AlyaaXzy (gua)
+•AlyaaXzy
 •Furqan
 •Elyas
 •Rasel
