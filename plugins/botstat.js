@@ -1,3 +1,4 @@
+let fetch = require('node-fetch')
 let handler = async (m, { conn }) => {
     let { anon, anticall, antispam, antitroli, backup, jadibot, groupOnly, nsfw } = global.db.data.settings[conn.user.jid]
     const chats = conn.chats.all()
@@ -7,7 +8,16 @@ let handler = async (m, { conn }) => {
     let _uptime = process.uptime() * 1000
     let uptime = clockString(_uptime)
 
-    m.reply(`
+    let str = `
+┌─〔 Info AlyaaXzy Botz 〕
+│Name: AlyaaXzy
+│Main Owner: AlyaaXzy
+│Operated Since: 19 September 2021
+│Language Used: Nodejs (JS)
+│Server: Heroku
+│SC: -
+└────
+
 ┌─〔 Status 〕
 ├ Aktif selama ${uptime}
 ├ Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
@@ -29,8 +39,8 @@ let handler = async (m, { conn }) => {
 ├ ${groupOnly ? '✅' : '❌'} *Mode Grup*
 ├ ${jadibot ? '✅' : '❌'} *Jadi Bot*
 ├ ${nsfw ? '✅' : '❌'} *Mode Nsfw*
-└────
-    `.trim())
+└────`.trim()
+     await conn.send2ButtonLoc(m.chat, await (await fetch(fla + 'Status Bot')).buffer(), str, '©FuadBot ', 'Owner', '.owner', 'Menu', '.menu', m)
 }
 handler.help = ['botstatus']
 handler.tags = ['info']
