@@ -1,4 +1,3 @@
-let fetch = require('node-fetch')
 let handler = async (m, { conn }) => {
     let { anon, anticall, antispam, antitroli, backup, jadibot, groupOnly, nsfw } = global.db.data.settings[conn.user.jid]
     const chats = conn.chats.all()
@@ -8,16 +7,7 @@ let handler = async (m, { conn }) => {
     let _uptime = process.uptime() * 1000
     let uptime = clockString(_uptime)
 
-    let str = `
-┌─〔 Info Fuad Bot 〕
-│Name: FuadBot
-│Main Owner: FuadOFC
-│Operated Since: 19 September 2021
-│Language Used: Nodejs (JS)
-│Server: Heroku
-│SC: -
-└────
-
+    m.reply(`
 ┌─〔 Status 〕
 ├ Aktif selama ${uptime}
 ├ Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
@@ -39,8 +29,8 @@ let handler = async (m, { conn }) => {
 ├ ${groupOnly ? '✅' : '❌'} *Mode Grup*
 ├ ${jadibot ? '✅' : '❌'} *Jadi Bot*
 ├ ${nsfw ? '✅' : '❌'} *Mode Nsfw*
-└────`.trim()
-     await conn.send2ButtonLoc(m.chat, await(await fetch(image)).buffer(), str, '©FuadBot ', 'Owner', '.owner', 'Menu', '.menu', m)
+└────
+    `.trim())
 }
 handler.help = ['botstatus']
 handler.tags = ['info']
