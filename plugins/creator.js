@@ -5,12 +5,7 @@ async function handler(m) {
   number = kontak[0].replace(/[^0-9]/g, '')
   let njid = number + '@s.whatsapp.net'
   let onW = await this.isOnWhatsApp(njid) || { isBusiness: false }
-
-  let name2 = namakontak2
-  number2 = kontak[1].replace(/[^0-9]/g, '')
-  let njid2 = number2 + '@s.whatsapp.net'
-  let onW2 = await this.isOnWhatsApp(njid2) || { isBusiness: false }
-
+  
   this.sendMessage(m.chat, {
     contacts: [{
       displayname: name, vcard: `
